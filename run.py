@@ -12,5 +12,5 @@ if __name__ == "__main__":
         running = is_docker_running(CONTAINER_NAME)
         if not running:
             send_message(f"Container {CONTAINER_NAME} is not running")
-        time.sleep(str(TIME_BETWEEN))
+        time.sleep(int(TIME_BETWEEN))
 
