@@ -9,8 +9,7 @@ def is_docker_running(container_name):
     try:
         container = docker_client.containers.get(container_name)
         container_state = container.attrs["State"]
-        print(container_state)
-        return(container_state)
+        return(container_state['Running'])
     except docker.errors.NotFound as e:
         send_message(f"Container {container_name} not found")
 

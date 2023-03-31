@@ -1,8 +1,8 @@
 """Run the implementation"""
 import os
 import time
-from docker import is_docker_running
-from requests_helper import send_message
+from src.docker import is_docker_running
+from src.equests_helper import send_message
 
 CONTAINER_NAME = os.getenv('CONTAINER_NAME')
 TIME_BETWEEN = os.getenv('TIME_BETWEEN')
