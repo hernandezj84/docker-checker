@@ -1,0 +1,10 @@
+---
+services:
+  backend:
+    image: hernandezj84/docker-checker
+    container_name: docker-checker
+    environment:
+      CONTAINER_NAME: ${CONTAINER_NAME}
+      TIME_BETWEEN: 5
+      SLACK_URL: ${SLACK_URL}
+
